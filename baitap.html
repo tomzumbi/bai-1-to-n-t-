@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>điểm trung bình và điểm tổng</h1>
+<p>Điểm Lý</p>
+ <input type="text" id="a">
+<p>Điểm hóa</p>
+ <input type="text" id="b">
+<P>Điểm Sinh</P>
+<input type="text" id="c">
+<br>
+<button type="button" onclick="tong()">tổng</button>
+<br>
+<button type="button" onclick="dtb()">điểm trung bình</button><br>
+<h1>chuyển đổi nhiệt độ</h1>
+<input type="text" id="d"> độ C
+<button type="button" onclick="chuyen()">chuyển sang độ F</button>
+<h1>tính chu vi và diện tích hình tròn</h1>
+
+
+bán kính <input type="text" id="r"><br>
+<button type="button" onclick="chuvi()">chu vi</button>
+<button type="button" onclick="dientich()">diện tích</button>
+<script>
+  function tong(){
+    let a = +document.getElementById("a").value
+    let b = +document.getElementById("b").value
+    let c = +document.getElementById("c").value
+    let tong = (a+b)+c
+      alert(tong)
+  }
+  function dtb(){
+      let a = +document.getElementById("a").value
+      let b = +document.getElementById("b").value
+      let c = +document.getElementById("c").value
+      let dtb = (a+b+c)/3
+      alert(dtb)
+
+  }
+  function chuyen(){
+      let d = +document.getElementById("d").value
+      let dof = d/5*9+32
+      alert(dof)
+  }
+  function chuvi(){
+      const Pi = 3.14
+      let r = +document.getElementById("r").value
+      let P = r*2*Pi
+      alert(P)
+
+  }
+  function dientich(){
+      const Pi=3.14
+      let r = +document.getElementById("r").value
+      let S= r*r*3.14
+      alert(S)
+  }
+</script>
+</body>
+</html>
